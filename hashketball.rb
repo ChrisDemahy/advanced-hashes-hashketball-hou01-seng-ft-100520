@@ -193,7 +193,7 @@ end
 # returns a hash representing the player
 def find_highest_value(symbol)
   # Variables to keep track of highest value and which player has it
-  highest_value = 0
+  highest_value = nil
   player_hash = {}
   # Enumerate across both teams players
   game_hash.each { |team, hash|
