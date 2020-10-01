@@ -140,7 +140,7 @@ def find_player(name)
     # Store the player hash if the name matches
     player = game_hash[:away][:players].find { |item| item[:player_name] == name }
   end
-  # return the plater hash
+  # return the player hash
   player
 end
 
