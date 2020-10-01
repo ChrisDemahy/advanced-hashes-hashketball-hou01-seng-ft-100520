@@ -222,9 +222,12 @@ end
 # Find the player with the highest number of points scored
 # returns a hash representing the player
 def most_points_scored
-  find_highest_value(:points)
+  hash = find_highest_value(:points)
+  hash[:player_name]
 end
 
+# Find the name of the winning teams
+# returns a string of the name of the winner
 def winning_team
   # Enumerate across both teams players
   home = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
