@@ -190,5 +190,6 @@ def big_shoe_rebounds
      v[:players].each { |i|
        biggest_shoe = i[:shoe] if i[:shoe] > shoe
    }
+ }
   rebounds
 end
