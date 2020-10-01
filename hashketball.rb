@@ -129,12 +129,11 @@ end
 
 def num_points_scored(name)
   player = game_hash[:home][:players].find { |item|
-    binding.pry
     item[:player_name] == name
    }
   if player = nil
     player = game_hash[:away][:players].find { |item| item[:player_name] == name }
   end
-
+  binding.pry
   player
 end
