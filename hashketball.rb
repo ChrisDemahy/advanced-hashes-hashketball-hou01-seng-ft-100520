@@ -167,5 +167,6 @@ end
 def team_colors(team)
   colors = []
   game_hash[:away][:team_name] == team ? colors = game_hash[:away][:team_colors] : colors = game_hash[:home][:team_colors]
+  binding.pry
   colors
 end
