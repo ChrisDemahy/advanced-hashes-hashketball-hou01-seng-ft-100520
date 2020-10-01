@@ -202,7 +202,7 @@ def find_highest_value(symbol)
        if player[symbol] > biggest_value
          # If they have the biggest shoe then save the shoe size
          #    and the number of rebounds that player has
-         biggest_value = player[symbol]
+         highest_value = player[symbol]
          player_hash = player
        end
     }
