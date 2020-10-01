@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe 'hashketball' do
   let(:alan_anderson) {
