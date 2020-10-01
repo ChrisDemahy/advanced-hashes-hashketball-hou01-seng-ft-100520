@@ -165,5 +165,5 @@ end
 # team - string of the team name
 # returns an array of the colors
 def team_colors(team)
-  game_hash.select { |k, v| v[:team_name] == team } #.fetch(:team_colors)
+  game_hash.select { |k, v| v[0][:team_name] == team } #.fetch(:team_colors)
 end
