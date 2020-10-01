@@ -207,6 +207,7 @@ def find_highest_value(symbol)
        end
     }
  }
+ return player
 end
 
 # Find how many rebounds the player with the biggest shoe has
