@@ -178,7 +178,7 @@ end
 # team - string of the name of the team
 # returns an array of all the numbers on the team
 def player_numbers(team)
-  # If it is the away team 
+  # If it is the away team
   if game_hash[:away][:team_name] == team
     # Map the players numbers to an array
     game_hash[:away][:players].map { |e| e[:number] }
