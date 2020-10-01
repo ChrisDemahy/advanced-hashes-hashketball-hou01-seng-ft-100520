@@ -224,3 +224,10 @@ end
 def most_points_scored
   find_highest_value(:points)
 end
+
+def winning_team
+  # Enumerate across both teams players
+  home = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
+  away = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
+  home << away ? away : home
+end
