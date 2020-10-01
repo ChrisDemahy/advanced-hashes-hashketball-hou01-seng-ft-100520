@@ -229,5 +229,5 @@ def winning_team
   # Enumerate across both teams players
   home = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
   away = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
-  home << away ? away : home
+  home << away ? game_hash[:away][:team_name] : game_hash[:home][:team_name]
 end
