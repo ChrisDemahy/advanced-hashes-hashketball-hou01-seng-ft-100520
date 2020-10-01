@@ -167,3 +167,9 @@ end
 def team_colors(team)
   game_hash[:away][:team_name] == team ? game_hash[:away][:colors] : game_hash[:home][:colors]
 end
+
+# Find the names of the teams
+# returns an array of strings of the names of the teams
+def team_names
+  game_hash.map { |e| e[:player_name] }
+end
