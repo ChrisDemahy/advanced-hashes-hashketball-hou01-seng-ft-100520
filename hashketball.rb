@@ -188,6 +188,27 @@ def player_numbers(team)
   end
 end
 
+# Finds the player with the highest value for the key provided 
+# symobl - symbol representing the key on the player hash to compare
+# returns a hash representing the player
+def find_highest_value(symbol)
+  # Variables to keep track of highest value and which player has it 
+  highest_value = 0
+  player_hash = {}
+  # Enumerate across both teams players
+  game_hash.each { |team, hash|
+    # For each player see if they have the biggest value
+     hash[:players].each { |player|
+       if player[value] > biggest_value
+         # If they have the biggest shoe then save the shoe size
+         #    and the number of rebounds that player has
+         biggest_value = player[value]
+         player_hash = player
+       end
+    }
+ }
+end
+
 # Find how many rebounds the player with the biggest shoe has
 # retuns an integer with the number of rebounds
 def big_shoe_rebounds
@@ -209,3 +230,5 @@ def big_shoe_rebounds
  # Return the players number of rebounds that had the biggest shoe
   rebounds
 end
+
+def most_points_scored 
