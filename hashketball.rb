@@ -213,9 +213,13 @@ end
 # Find how many rebounds the player with the biggest shoe has
 # retuns an integer with the number of rebounds
 def big_shoe_rebounds
+  # Find the player with the biggest shoe
   hash = find_highest_value(:shoe)
+  # return their rebounds
   hash[:rebounds]
 end
 
+# Find the player with the highest number of points scored
 def most_points_scored
+  find_highest_value(:points)
 end
