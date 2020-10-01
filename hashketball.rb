@@ -191,15 +191,21 @@ end
 # Find how many rebounds the player with the biggest shoe has
 # retuns an integer with the number of rebounds
 def big_shoe_rebounds
+  # variables to store the value
   biggest_shoe = 0
   rebounds = 0
-  game_hash.each { |k, v|
-     v[:players].each { |i|
-       if i[:shoe] > biggest_shoe
-         biggest_shoe = i[:shoe]
-         rebounds = i[:rebounds]
+  # Enumerate across both teams players
+  game_hash.each { |team, hash|
+    # For each player see if they have the biggest shoe
+     hash[:players].each { |player|
+       if player[:shoe] > biggest_shoe
+         # If they have the biggest shoe then save the shoe size
+         #    and the number of rebounds that player has
+         biggest_shoe = player[:shoe]
+         rebounds = player[:rebounds]
        end
     }
  }
+ # Return the players number of rebounds that had the biggest shoe
   rebounds
 end
