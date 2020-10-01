@@ -126,7 +126,8 @@ def game_hash
     }
   }
 end
-
+# Find player
+# name - name of the player as a string
 # Finds and returns the Player hash
 def find_player(name)
   # Enumerate across the home players array to find the correct name
@@ -142,6 +143,8 @@ def find_player(name)
   # return the plater hash
   player
 end
+
+
 # Return the number of points scored by the given player
 def num_points_scored(name)
   find_player(name)[:points]
