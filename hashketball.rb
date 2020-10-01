@@ -234,3 +234,8 @@ def winning_team
   away = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
   home << away ? game_hash[:away][:team_name] : game_hash[:home][:team_name]
 end
+
+
+def player_with_longest_name
+  find_highest_value(:player_name)
+end
