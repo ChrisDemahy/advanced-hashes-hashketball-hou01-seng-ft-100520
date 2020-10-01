@@ -136,7 +136,7 @@ def find_player(name)
     item[:player_name] == name
    }
    # Only enumerate a second time if the first enumeration didn't find the name
-  if player = nil
+  if player == nil
     # Store the player hash if the name matches
     player = game_hash[:away][:players].find { |item| item[:player_name] == name }
   end
