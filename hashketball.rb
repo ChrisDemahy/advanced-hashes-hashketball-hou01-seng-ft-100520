@@ -229,13 +229,20 @@ end
 # Find the name of the winning teams
 # returns a string of the name of the winner
 def winning_team
-  # Enumerate across both teams players
+  # Map reduce the points on both teams and compare
   home = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
   away = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
+  # return the name of the team that won
   home < away ? game_hash[:away][:team_name] : game_hash[:home][:team_name]
 end
 
 
 def player_with_longest_name
-  find_highest_value(:player_name)
+  # keep track of the longest name
+  longest_name = ""
+  # Enumerate across both teams players
+  game_hash.each { |team, hash|
+    # For each player see if they have the longest name
+     hash[:players].each { |player|
+       longest_name = player[:player_name] if player[:player_name].length > longest_name.length
 end
