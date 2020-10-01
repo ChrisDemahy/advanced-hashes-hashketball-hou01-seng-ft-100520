@@ -246,4 +246,5 @@ def player_with_longest_name
      hash[:players].each { |player|
        longest_name = player[:player_name] if player[:player_name].length > longest_name.length
      }}
+     longest_name
 end
