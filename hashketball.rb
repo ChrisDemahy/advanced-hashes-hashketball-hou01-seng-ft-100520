@@ -165,8 +165,6 @@ end
 # team - string of the team name
 # returns an array of the colors
 def team_colors(team)
-  colors = []
-  game_hash[:away][:team_name] == team ? colors = game_hash[:away][:team_colors] : colors = game_hash[:home][:team_colors]
-  binding.pry
-  colors
+  
+  game_hash[:away][:team_name] == team ? game_hash[:away][:colors] : game_hash[:home][:colors]
 end
