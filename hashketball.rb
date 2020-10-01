@@ -150,3 +150,9 @@ def num_points_scored(name)
   player = player_status(name)
   player[:points]
 end
+
+# Returns the shoe size of the given player
+def shoe_size(name)
+  player = player_status(name)
+  player[shoe]
+end
