@@ -127,9 +127,9 @@ def game_hash
   }
 end
 
-# Finds and returns the Player hash 
+# Finds and returns the Player hash
 def find_player(name)
-  # Enumerate across the home players array to find the correct name 
+  # Enumerate across the home players array to find the correct name
   player = game_hash[:home][:players].find { |item|
     # Store the player hash if it matches
     item[:player_name] == name
