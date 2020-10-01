@@ -128,8 +128,8 @@ def game_hash
 end
 # Find player
 # name - name of the player as a string
-# Finds and returns the Player hash
-def find_player(name)
+# Finds and returns the Player's status
+def player_status(name)
   # Enumerate across the home players array to find the correct name
   player = game_hash[:home][:players].find { |item|
     # Store the player hash if it matches
