@@ -188,11 +188,11 @@ def player_numbers(team)
   end
 end
 
-# Finds the player with the highest value for the key provided 
+# Finds the player with the highest value for the key provided
 # symobl - symbol representing the key on the player hash to compare
 # returns a hash representing the player
 def find_highest_value(symbol)
-  # Variables to keep track of highest value and which player has it 
+  # Variables to keep track of highest value and which player has it
   highest_value = 0
   player_hash = {}
   # Enumerate across both teams players
@@ -231,4 +231,4 @@ def big_shoe_rebounds
   rebounds
 end
 
-def most_points_scored 
+def most_points_scored
