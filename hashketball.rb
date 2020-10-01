@@ -171,5 +171,5 @@ end
 # Find the names of the teams
 # returns an array of strings of the names of the teams
 def team_names
-  game_hash.map { |k, v| v[:player_name] }
+  game_hash.map { |k, v| v[:team_name] }
 end
