@@ -253,4 +253,5 @@ end
 def long_name_steals_a_ton?
   steals = find_highest_value(:steals)
   steals = steals[:steals]
+  steals == player_with_longest_name
 end
