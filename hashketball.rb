@@ -164,3 +164,6 @@ end
 # Find the colors of the team given
 # team - string of the team name
 # returns an array of the colors
+def team_colors(team)
+  game_hash.select { |e| e[:team_name] == team }.fetch(:team_colors)
+end
