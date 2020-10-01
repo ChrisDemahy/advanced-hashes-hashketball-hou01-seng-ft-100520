@@ -200,14 +200,14 @@ def find_highest_value(symbol)
     # For each player see if they have the biggest value
      hash[:players].each { |player|
        if player[symbol] > highest_value
-         # If they have the biggest shoe then save the shoe size
-         #    and the number of rebounds that player has
+         # If they have the highest value then save the player hash
          highest_value = player[symbol]
          player_hash = player
        end
     }
  }
- return player_hash
+ # return the hash of the player with the highest value
+ player_hash
 end
 
 # Find how many rebounds the player with the biggest shoe has
