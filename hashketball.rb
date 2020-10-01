@@ -193,7 +193,7 @@ end
 # returns a hash representing the player
 def find_highest_value(symbol)
   # Variables to keep track of highest value and which player has it
-  highest_value = nil
+  highest_value = 0
   player_hash = {}
   # Enumerate across both teams players
   game_hash.each { |team, hash|
@@ -232,7 +232,7 @@ def winning_team
   # Enumerate across both teams players
   home = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
   away = game_hash[:home][:players].map { |e| e[:points] }.reduce(:+)
-  home << away ? game_hash[:away][:team_name] : game_hash[:home][:team_name]
+  home < away ? game_hash[:away][:team_name] : game_hash[:home][:team_name]
 end
 
 
