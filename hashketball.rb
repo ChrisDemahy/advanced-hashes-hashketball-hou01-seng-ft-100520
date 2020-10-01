@@ -147,6 +147,6 @@ end
 
 # Return the number of points scored by the given player
 def num_points_scored(name)
-  player = find_player(name)
+  player = player_status(name)
   player[:points]
 end
