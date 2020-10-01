@@ -180,3 +180,14 @@ end
 def player_numbers(team)
   game_hash[:away][:team_name] == team ? game_hash[:away][:players].map { |e| e[:number] } : game_hash[:home][:players].map { |e| e[:number] }
 end
+
+# Find how many rebounds the player with the biggest shoe has
+# retuns an integer with the number of rebounds
+def big_shoe_rebounds
+  biggest_shoe = 0
+  rebounds = 0
+  game_hash[:home][:players].each { |e| 
+    biggest_shoe = e[:shoe] if e[:shoe] > shoe
+   }
+  rebounds
+end
