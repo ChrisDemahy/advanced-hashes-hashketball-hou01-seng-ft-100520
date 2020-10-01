@@ -127,13 +127,22 @@ def game_hash
   }
 end
 
-def num_points_scored(name)
+# Finds and returns the Player hash 
+def find_player(name)
+  # Enumerate across the home players array to find the correct name 
   player = game_hash[:home][:players].find { |item|
+    # Store the player hash if it matches
     item[:player_name] == name
    }
+   # Only enumerate a second time if the first enumeration didn't find the name
   if player = nil
+    # Store the player hash if the name matches
     player = game_hash[:away][:players].find { |item| item[:player_name] == name }
   end
-  binding.pry
+  # return the plater hash
   player
+end
+# Return the number of points scored by the given player
+def num_points_scored(name)
+  find_player(name)[:points]
 end
