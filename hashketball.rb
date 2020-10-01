@@ -220,6 +220,7 @@ def big_shoe_rebounds
 end
 
 # Find the player with the highest number of points scored
+# returns a hash representing the player
 def most_points_scored
   find_highest_value(:points)
 end
