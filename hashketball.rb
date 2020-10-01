@@ -127,5 +127,9 @@ def game_hash
 end
 
 def num_points_scored(name)
-  game_hash
+  player = game_hash[:home][:players].find { |item| item[:player_name] == name }
+  if player = nil
+    player = game_hash[:away][:players].find { |item| item[:player_name] == name }
+  end
+  player
 end
