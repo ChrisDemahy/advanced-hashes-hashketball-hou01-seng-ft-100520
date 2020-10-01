@@ -154,5 +154,5 @@ end
 # Returns the shoe size of the given player
 def shoe_size(name)
   player = player_status(name)
-  player[shoe]
+  player[:shoe]
 end
