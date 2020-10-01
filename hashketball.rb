@@ -252,7 +252,7 @@ def player_with_longest_name
 end
 
 # Finds out if the player with the longest name also steals more then average
-# compares longest name with highest number of steals 
+# compares longest name with highest number of steals
 # returns a boolean of if their the same person
 def long_name_steals_a_ton?
   steals = find_highest_value(:steals)
