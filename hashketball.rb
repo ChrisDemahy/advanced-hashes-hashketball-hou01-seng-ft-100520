@@ -126,9 +126,10 @@ def game_hash
     }
   }
 end
-# Find player
-# name - name of the player as a string
+
 # Finds and returns the Player's status
+# name - name of the player as a string
+# returns a hash of the player
 def player_status(name)
   # Enumerate across the home players array to find the correct name
   player = game_hash[:home][:players].find { |item|
@@ -144,15 +145,22 @@ def player_status(name)
   player
 end
 
-
-# Return the number of points scored by the given player
+# Find the number of points scored by the given player
+# name - string of player name
+# returns an integer of the points
 def num_points_scored(name)
   player = player_status(name)
   player[:points]
 end
 
-# Returns the shoe size of the given player
+# Finds the shoe size of the given player
+# name - string of the player name 
+# returns an integer of the size 
 def shoe_size(name)
   player = player_status(name)
   player[:shoe]
 end
+
+# Find the colors of the team given
+# team - string of the team name
+# returns an array of the colors
