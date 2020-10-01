@@ -236,7 +236,8 @@ def winning_team
   home < away ? game_hash[:away][:team_name] : game_hash[:home][:team_name]
 end
 
-
+# Finds the player with the longest name
+# returns a string of their name
 def player_with_longest_name
   # keep track of the longest name
   longest_name = ""
@@ -250,6 +251,9 @@ def player_with_longest_name
      longest_name
 end
 
+# Finds out if the player with the longest name also steals more then average
+# compares longest name with highest number of steals 
+# returns a boolean of if their the same person
 def long_name_steals_a_ton?
   steals = find_highest_value(:steals)
   steals = steals[:player_name]
