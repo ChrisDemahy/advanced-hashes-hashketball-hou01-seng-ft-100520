@@ -249,3 +249,8 @@ def player_with_longest_name
    }
      longest_name
 end
+
+def long_name_steals_a_ton?
+  steals = find_highest_value(:steals)
+  steals = steals[:steals]
+end
