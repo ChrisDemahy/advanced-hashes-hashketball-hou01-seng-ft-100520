@@ -173,3 +173,10 @@ end
 def team_names
   game_hash.map { |k, v| v[:team_name] }
 end
+
+# Finds the numbers of all the players given a team_name
+# team - string of the name of the team
+# returns an array of all the numbers on the team
+def player_numbers(team)
+  []
+end
